@@ -3,9 +3,18 @@
 // then display dog gif
 // otherwise
 //display cat gif
-function clickedButton() {
+
+
+var btn = document.getElementById('submit');
+btn.addEventListener('click', function () {
+    
     let cat = 0;
     let dog = 0;
+    var question1 = document.getElementsByClassName('question1')
+    var question2 = document.getElementsByClassName('question2')
+    // var question3 = document.getElementsByClassName('question3')
+    // var question4 = document.getElementsByClassName('question4')
+
     if (question1.value === "low") {
         cat++;
     } else if (question1.value === "medium") {
@@ -25,12 +34,6 @@ function clickedButton() {
         console.log("Cat: ", cat);
     }
 
-}
-
-
-
-
-
 
     fetch('https://cataas.com/cat?json=true')
         .then(function (response) {
@@ -43,3 +46,4 @@ function clickedButton() {
             console.log(catGif);
             return catData;
         })
+})

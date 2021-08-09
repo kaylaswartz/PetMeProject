@@ -4,6 +4,7 @@
 <head>
     <title>Pet Me!</title>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -17,64 +18,77 @@
     </section>
     <h1>Answer the following questions</h1>
     <section>
-        <form class="question1">
-            <span>Question 1:</span><br>
-            <span>How active do you want your pet to be?</span><br>
-            <input type="radio" id="html" name="active" value="low">
-            <label for="html">low</label><br>
-            <input type="radio" id="html" name="active" value="medium">
-            <label for="html">medium</label><br>
-            <input type="radio" id="html" name="active" value="high">
-            <label for="html">high</label>
+        <form>
+            <div class="question1">
+                <span>Question 1:</span><br>
+                <span>How active do you want your pet to be?</span><br>
+                <input type="radio" id="html" name="active" value="low">
+                <label for="html">low</label><br>
+                <input type="radio" id="html" name="active" value="medium">
+                <label for="html">medium</label><br>
+                <input type="radio" id="html" name="active" value="high">
+                <label for="html">high</label>
+            </div>
+            <br>
+            <div class="question2">
+                <span>Question 2:</span><br>
+                <span>How often do you leave your house?</span><br>
+                <input type="radio" id="html" name="independence" value="never">
+                <label for="html">never</label><br>
+                <input type="radio" id="html" name="independence" value="sometimes">
+                <label for="html">sometimes</label><br>
+                <input type="radio" id="html" name="independence" value="always">
+                <label for="html">always</label>
+            </div>
+            <br>
+            <div class="question3">
+                <span>Question 3:</span><br>
+                <span>Would you like to always cuddle with your pet?</span><br>
+                <input type="radio" id="html" name="cuddle" value="yes">
+                <label for="html">yes</label><br>
+                <input type="radio" id="html" name="cuddle" value="no">
+                <label for="html">no</label><br>
+            </div>
+            <br>
+            <div class="question4">
+                <span>Question 4:</span><br>
+                <span>How cute do you want your pet to be?</span><br>
+                <input type="radio" id="html" name="cuteness" value="0">
+                <label for="html">0%</label><br>
+                <input type="radio" id="html" name="cuteness" value="25">
+                <label for="html">25%</label><br>
+                <input type="radio" id="html" name="cuteness" value="50">
+                <label for="html">50%</label><br>
+                <input type="radio" id="html" name="cuteness" value="75">
+                <label for="html">75%</label><br>
+                <input type="radio" id="html" name="cuteness" value="100">
+                <label for="html">100%</label>
+            </div>
+
+            <br>
+            <section>
+                <img class="catgif" src="" alt="">
+            </section>
+
+            <input id="submit" type="submit">
         </form>
-        <br>
-        <form class="question2">
-            <span>Question 2:</span><br>
-            <span>How often do you leave your house?</span><br>
-            <input type="radio" id="html" name="independence" value="never">
-            <label for="html">never</label><br>
-            <input type="radio" id="html" name="independence" value="sometimes">
-            <label for="html">sometimes</label><br>
-            <input type="radio" id="html" name="independence" value="always">
-            <label for="html">always</label>
-        </form>
-        <br>
-        <form class="question3">
-            <span>Question 3:</span><br>
-            <span>Would you like to always cuddle with your pet?</span><br>
-            <input type="radio" id="html" name="cuddle" value="yes">
-            <label for="html">yes</label><br>
-            <input type="radio" id="html" name="cuddle" value="no">
-            <label for="html">no</label><br>
-        </form>
-        <br>
-        <form class="question4">
-            <span>Question 4:</span><br>
-            <span>How cute do you want your pet to be?</span><br>
-            <input type="radio" id="html" name="cuteness" value="0">
-            <label for="html">0%</label><br>
-            <input type="radio" id="html" name="cuteness" value="25">
-            <label for="html">25%</label><br>
-            <input type="radio" id="html" name="cuteness" value="50">
-            <label for="html">50%</label><br>
-            <input type="radio" id="html" name="cuteness" value="75">
-            <label for="html">75%</label><br>
-            <input type="radio" id="html" name="cuteness" value="100">
-            <label for="html">100%</label>
-        </form>
-        <br>
-        <section>
-            <img class="catgif" src="" alt="">
-        </section>
-    <input id="submit" onclick="clickedButton" type="submit">
-    <!-- <button type="button" onclick="my_button_click_handler">Click this button</button>
+
+
+        <!-- </form> -->
+
+        <!-- <form action="handle_user.php" method="POST" />
+  <input type="submit" value="Save" name="save" />
+  <input type="submit" value="Submit for Approval" name="approve" />
+</form> -->
+
+        <!-- <button type="button" onclick="my_button_click_handler">Click this button</button>
 <script>
 function my_button_click_handler()
 {
 alert('Button Clcked');
 }
 </script> -->
-</section>
+    </section>
 
 
 
