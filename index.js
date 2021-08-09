@@ -1,12 +1,13 @@
+url = 'https://cataas.com/cat?json=true'
 fetch('https://cataas.com/cat?json=true')
   .then(function(response){
     console.log(response)
     return response.json();
 }).then(function(catData){
-    petCatData = catData 
     console.log(catData)
-    var catGif = document.getElementsByClassName('catgif');
-
+    var catGif = document.getElementById("catImage").src 
+    catGif = catData.url
+    console.log(catGif)
     return catData
 })
 
