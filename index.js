@@ -14,9 +14,11 @@ btn.addEventListener('click', function () {
     var question2 = document.getElementsByClassName('question2')
     // var question3 = document.getElementsByClassName('question3')
     // var question4 = document.getElementsByClassName('question4')
+    var lowactive = document.getElementById('activelow')
 
-    if (question1.value === "low") {
+    if (lowactive.value === "low") {
         cat++;
+        console.log("I am here at the low answer")
     } else if (question1.value === "medium") {
         cat++;
         dog++;
