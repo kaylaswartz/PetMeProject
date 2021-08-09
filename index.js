@@ -1,8 +1,26 @@
-fetch('https://cataas.com/cat/gif')
-  .then(function(data){
-    return data
-    //console.log(data)
-});
+fetch('https://cataas.com/cat?json=true')
+  .then(function(response){
+    console.log(response)
+    return response.json();
+}).then(function(catData){
+    petCatData = catData 
+    console.log(catData)
+    var catGif = document.getElementsByClassName('catgif');
+
+    return catData
+})
+
+
+// then(function(data){
+//     console.log(data)
+//     var arrayOfAvatarClass = document.getElementsByClassName('catgif');
+//     return data
+// })
+// fetch('https://cataas.com/cat/gif')
+//   .then(function(data){
+//     return data
+//     //console.log(data)
+// });
 
 // class getCat{
 //     constructor() {
