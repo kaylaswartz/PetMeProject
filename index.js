@@ -12,16 +12,7 @@ btn.addEventListener('click', function () {
     let dog = 0;
 
     let selectedAnswers = document.querySelectorAll("input:checked")
-    // let selectedPhoto = 'https://cataas.com/cat?json=true'
-    // let randomPhoto = selectedPhoto.url
-    // let arrayOfCatImage = document.getElementById('catImage');
-    // arrayOfImage.src = `https://cataas.com/${randomPhoto}`
-
-
-
-
-    // var arrayofQuestions = document.getElementsByClassName("question")
-    // arrayofQuestions
+    
 
     if (selectedAnswers[0].value === "low") {
         cat++;
@@ -88,17 +79,11 @@ btn.addEventListener('click', function () {
             }).then(function (catData) {
                 catAPIData = catData
                 let url = catAPIData.url
-                //let selectedPhoto = 'https://cataas.com/cat?json=true'
-                //let randomPhoto = selectedPhoto.url
                 let arrayOfImage = document.getElementById('petImage');
-                //arrayOfCatImage.src = `https://cataas.com/${randomPhoto}`
                 arrayOfImage.src = `https://cataas.com/${url}`
-                return catData;
+                // return catData;
             })
-
-
-
-    } else {
+    } else if (cat < dog) {
         fetch(`https://random.dog/woof.json`)
             .then(function (response) {
                 console.log(response);
@@ -108,16 +93,14 @@ btn.addEventListener('click', function () {
                 let url = dogAPIData.url
 
                 let arrayOfImage = document.getElementById('petImage');
-                //arrayOfCatImage.src = `https://cataas.com/${randomPhoto}`
                 arrayOfImage.src = url
-
-
-                return dogData;
+                // return dogData;
             })
-    }
+    } else if (cat === dog) {
+        let arrayOfImage = document.getElementById('petImage')         
+            arrayOfImage.src = `llama.jpg`;
 
-
-
+            }
 
 
 })
