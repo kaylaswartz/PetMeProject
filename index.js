@@ -4,7 +4,8 @@
 // otherwise
 //display cat gif
 
-
+var continueDisplay = document.getElementById('continue');
+continueDisplay.style.display = "none"
 var btn = document.getElementById('submit');
 btn.addEventListener('click', function () {
 
@@ -101,6 +102,9 @@ btn.addEventListener('click', function () {
             arrayOfImage.src = `llama.jpg`;
 
             }
+
+    continueDisplay.style.display = 'block';
+
 
 
 })
