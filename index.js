@@ -7,17 +7,18 @@
 
 var btn = document.getElementById('submit');
 btn.addEventListener('click', function () {
-    
+
     let cat = 0;
     let dog = 0;
-    var question1 = document.getElementsByClassName('question1')
-    var question2 = document.getElementsByClassName('question2')
-    // var question3 = document.getElementsByClassName('question3')
-    // var question4 = document.getElementsByClassName('question4')
-    //var lowActive = document.getElementById('activelow')
-    //var mediumActive = document.getElementById('mediumActive')
 
-    var selectedAnswers = document.querySelectorAll("input:checked")
+    let selectedAnswers = document.querySelectorAll("input:checked")
+    // let selectedPhoto = 'https://cataas.com/cat?json=true'
+    // let randomPhoto = selectedPhoto.url
+    // let arrayOfCatImage = document.getElementById('catImage');
+    // arrayOfImage.src = `https://cataas.com/${randomPhoto}`
+
+
+
 
     // var arrayofQuestions = document.getElementsByClassName("question")
     // arrayofQuestions
@@ -64,9 +65,9 @@ btn.addEventListener('click', function () {
     } else {
         cat++;
         dog++;
-    } 
-    
-    
+    }
+
+
     if (selectedAnswers[4].value === "NoFur") {
         cat++;
     } else if (selectedAnswers[4].value === "LittleFur") {
@@ -76,25 +77,47 @@ btn.addEventListener('click', function () {
         dog++;
     };
 
-    console.log("You are a cat person:",cat)
+    console.log("You are a cat person:", cat)
     console.log("You are a dog person", dog)
 
-    if(cat > dog){
-        
-    }else {
-    
+    if (cat > dog) {
+        fetch(`https://cataas.com/cat?json=true`)
+            .then(function (response) {
+                console.log(response);
+                return response.json();
+            }).then(function (catData) {
+                catAPIData = catData
+                let url = catAPIData.url
+                //let selectedPhoto = 'https://cataas.com/cat?json=true'
+                //let randomPhoto = selectedPhoto.url
+                let arrayOfImage = document.getElementById('petImage');
+                //arrayOfCatImage.src = `https://cataas.com/${randomPhoto}`
+                arrayOfImage.src = `https://cataas.com/${url}`
+                return catData;
+            })
+
+
+
+    } else {
+        fetch(`https://random.dog/woof.json`)
+            .then(function (response) {
+                console.log(response);
+                return response.json();
+            }).then(function (dogData) {
+                dogAPIData = dogData
+                let url = dogAPIData.url
+
+                let arrayOfImage = document.getElementById('petImage');
+                //arrayOfCatImage.src = `https://cataas.com/${randomPhoto}`
+                arrayOfImage.src = url
+
+
+                return dogData;
+            })
     }
 
 
-    fetch('https://cataas.com/cat?json=true')
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        }).then(function (catData) {
-            console.log(catData)
-            var catGif = document.getElementById("catImage").src
-            catGif = catData.url;
-            console.log(catGif);
-            return catData;
-        })
+
+
+
 })
