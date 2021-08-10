@@ -3,29 +3,28 @@
 // then display dog gif
 // otherwise
 //display cat gif
+var btn1 = document.getElementById('clickMe');
+btn1.addEventListener('click', function () {
 fetch('https://meowfacts.herokuapp.com/')
     .then(function (response) {
+        console.log(response);
         return response.json();
-    
     }).then(function (factData) {
-        // console.log("JSON Response: ", factData)
+        let factArray = [];
         let fact = factData.data;
-        let randomCatFact = document.getElementById('fact1').innerText;
-        randomCatFact = fact;
-        
-
-    //     let catFact = document.getElementById('fact1');
-    //     catFact.innerText = fact
-        // continueDisplayDog.style.display = 'block';
+        factArray.push(fact);
+        let randomCatFact = document.getElementById('fact1');
+        randomCatFact.innerText = factArray;
+      
     })
-
+})
 
 var continueDisplayCat = document.getElementById('continueCat');
-continueDisplayCat.style.display = "none"
+continueDisplayCat.style.display = "none";
 var continueDisplayDog = document.getElementById('continueDog');
-continueDisplayDog.style.display = "none"
+continueDisplayDog.style.display = "none";
 var continueDisplayLlama = document.getElementById('continueLlama');
-continueDisplayLlama.style.display = "none"
+continueDisplayLlama.style.display = "none";
 
 var btn = document.getElementById('submit');
 btn.addEventListener('click', function () {
