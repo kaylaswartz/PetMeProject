@@ -76,6 +76,15 @@ btn.addEventListener('click', function () {
         dog++;
     };
 
+    console.log("You are a cat person:",cat)
+    console.log("You are a dog person", dog)
+
+    if(cat > dog){
+        
+    }else {
+    
+    }
+
 
     fetch('https://cataas.com/cat?json=true')
         .then(function (response) {
