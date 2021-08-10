@@ -18,7 +18,7 @@
     </section>
     <h1>Answer the following questions</h1>
     <section>
-        <form>
+        <form id ="myForm">
             <div class="question1">
                 <span>Question 1:</span><br>
                 <span>How active do you want your pet to be?</span><br>
@@ -64,7 +64,17 @@
                 <input type="radio" id="html" name="cuteness" value="100">
                 <label for="html">100%</label>
             </div>
-
+            <br>
+            <div class="question5">
+                <span>Question 5:</span><br>
+                <span>What would you want your pet to have?</span><br>
+                <input type="radio" id="html" name="fur" value="NoFur">
+                <label for="html">No Fur</label><br>
+                <input type="radio" id="html" name="fur" value="LittleFur">
+                <label for="html">Little Fur</label><br>
+                <input type="radio" id="html" name="fur" value="VeryFurry">
+                <label for="html">Very Furry</label>
+            </div>
             <br>
             <section>
                 <img class="catgif" src="" alt="">
@@ -72,9 +82,20 @@
 
             <input id="submit" type="submit">
         </form>
+    </section>
 
+    </body>
 
-        <!-- </form> -->
+    <script>
+        const myForm = document.getElementById("myForm")
+        myForm.addEventListener("submit", (e) =>{
+            e.preventDefault()
+            console.log("The form has been submitted")
+        })
+    </script>>
+</body>
+
+      <!-- </form> -->
 
         <!-- <form action="handle_user.php" method="POST" />
   <input type="submit" value="Save" name="save" />
@@ -88,8 +109,3 @@ function my_button_click_handler()
 alert('Button Clcked');
 }
 </script> -->
-    </section>
-
-
-
-</body>

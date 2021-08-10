@@ -14,20 +14,27 @@ btn.addEventListener('click', function () {
     var question2 = document.getElementsByClassName('question2')
     // var question3 = document.getElementsByClassName('question3')
     // var question4 = document.getElementsByClassName('question4')
-    var lowactive = document.getElementById('activelow')
+    //var lowActive = document.getElementById('activelow')
+    //var mediumActive = document.getElementById('mediumActive')
 
-    if (lowactive.value === "low") {
+    var selectedAnswers = document.querySelectorAll("input:checked")
+
+    // var arrayofQuestions = document.getElementsByClassName("question")
+    // arrayofQuestions
+
+    if (selectedAnswers[0].value === "low") {
         cat++;
         console.log("I am here at the low answer")
-    } else if (question1.value === "medium") {
+    } else if (selectedAnswers[0].value === "medium") {
         cat++;
         dog++;
     } else {
         dog++;
     };
-    if (question2.value === "never") {
+
+    if (selectedAnswers[1].value === "never") {
         dog++;
-    } else if (question2.value === "sometimes") {
+    } else if (selectedAnswers[1].value === "sometimes") {
         cat++;
         dog++;
     } else {
@@ -35,6 +42,39 @@ btn.addEventListener('click', function () {
         console.log("Dog: ", dog);
         console.log("Cat: ", cat);
     }
+
+    if (selectedAnswers[2].value === "yes") {
+        dog++;
+    } else if (selectedAnswers[2].value === "no") {
+        cat++;
+    }
+
+    if (selectedAnswers[3].value === "0") {
+        cat++;
+        dog++;
+    } else if (selectedAnswers[3].value === "25") {
+        cat++;
+        dog++;
+    } else if (selectedAnswers[3].value === "50") {
+        cat++;
+        dog++;
+    } else if (selectedAnswers[3].value === "75") {
+        cat++;
+        dog++;
+    } else {
+        cat++;
+        dog++;
+    } 
+    
+    
+    if (selectedAnswers[4].value === "NoFur") {
+        cat++;
+    } else if (selectedAnswers[4].value === "LittleFur") {
+        cat++;
+        dog++;
+    } else {
+        dog++;
+    };
 
 
     fetch('https://cataas.com/cat?json=true')
