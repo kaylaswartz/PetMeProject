@@ -3,9 +3,30 @@
 // then display dog gif
 // otherwise
 //display cat gif
+fetch('https://meowfacts.herokuapp.com/')
+    .then(function (response) {
+        return response.json();
+    
+    }).then(function (factData) {
+        // console.log("JSON Response: ", factData)
+        let fact = factData.data;
+        let randomCatFact = document.getElementById('fact1').innerText;
+        randomCatFact = fact;
+        
 
-var continueDisplay = document.getElementById('continue');
-continueDisplay.style.display = "none"
+    //     let catFact = document.getElementById('fact1');
+    //     catFact.innerText = fact
+        // continueDisplayDog.style.display = 'block';
+    })
+
+
+var continueDisplayCat = document.getElementById('continueCat');
+continueDisplayCat.style.display = "none"
+var continueDisplayDog = document.getElementById('continueDog');
+continueDisplayDog.style.display = "none"
+var continueDisplayLlama = document.getElementById('continueLlama');
+continueDisplayLlama.style.display = "none"
+
 var btn = document.getElementById('submit');
 btn.addEventListener('click', function () {
 
@@ -17,7 +38,6 @@ btn.addEventListener('click', function () {
 
     if (selectedAnswers[0].value === "low") {
         cat++;
-        console.log("I am here at the low answer")
     } else if (selectedAnswers[0].value === "medium") {
         cat++;
         dog++;
@@ -32,8 +52,6 @@ btn.addEventListener('click', function () {
         dog++;
     } else {
         cat++;
-        console.log("Dog: ", dog);
-        console.log("Cat: ", cat);
     }
 
     if (selectedAnswers[2].value === "yes") {
@@ -82,7 +100,8 @@ btn.addEventListener('click', function () {
                 let url = catAPIData.url
                 let arrayOfImage = document.getElementById('petImage');
                 arrayOfImage.src = `https://cataas.com/${url}`
-                // return catData;
+                continueDisplayCat.style.display = 'block';
+                
             })
     } else if (cat < dog) {
         fetch(`https://random.dog/woof.json`)
@@ -95,16 +114,19 @@ btn.addEventListener('click', function () {
 
                 let arrayOfImage = document.getElementById('petImage');
                 arrayOfImage.src = url
-                // return dogData;
+                continueDisplayDog.style.display = 'block';
+                
             })
     } else if (cat === dog) {
         let arrayOfImage = document.getElementById('petImage')         
             arrayOfImage.src = `llama.jpg`;
+            continueDisplayLlama.style.display = 'block';
 
             }
 
-    continueDisplay.style.display = 'block';
-
+    continueDisplayCat.style.display = "none"
+    continueDisplayDog.style.display = "none"
+    continueDisplayLlama.style.display = "none"
 
 
 })
