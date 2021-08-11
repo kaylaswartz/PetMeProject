@@ -17,9 +17,9 @@
             <a href="LlamaFacts.html">Llama Facts</a>
         </h1>
     </section>
-    <h1>Answer the following questions</h1>
+    <h1 id="answerTheQuestions">Answer the following questions</h1>
     <section>
-        <form id ="myForm">
+        <form id="myForm">
             <div class="question1">
                 <span>Question 1:</span><br>
                 <span>How active do you want your pet to be?</span><br>
@@ -85,20 +85,19 @@
             <a id="continueCat" href="CatFacts.html">Click Here To Learn More About Your New Cat!</a> <br><br>
             <a id="continueDog" href="DogFacts.html">Click Here To Learn More About Your New Dog!</a> <br><br>
             <a id="continueLlama" href="LlamaFacts.html">Click Here To Learn More About Your New Llama!</a> <br><br>
-            <img id="petImage" src="petPic2.jpg" alt=""/>
-            
+            <img id="petImage" src="petPic2.jpg" alt="" />
+
 
         </form>
     </section>
 
-    </body>
-
-    <script>
-        const myForm = document.getElementById("myForm")
-        myForm.addEventListener("submit", (e) =>{
-            e.preventDefault()
-            console.log("The form has been submitted")
-        })
-    </script>>
 </body>
 
+<script>
+    const myForm = document.getElementById("myForm")
+    myForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+        console.log("The form has been submitted")
+    })
+</script>>
+</body>
