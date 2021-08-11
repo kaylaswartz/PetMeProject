@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body id="body">
     <section>
         <h1 class="topnav">
             <a class="active" href="index.html">Welcome</a>
@@ -18,12 +18,12 @@
 
         </h1>
     </section>
-    <section>
+    <section id="dogImageFade">
         <div class="fadeImg">
-            <img id="SillyDog" style="text-align: center" src="DogPicture1.jpg" alt="Silly Dog" height="175" width="300">
-            <img id="CuteDog" style="text-align: center" src="puppy.jpg" height="175" width="300">
-            <img id="CuteDog2" style="text-align: center" src="CutePuppy.jpg" height="175" width="300">
-            <!-- <img style="display:none;" src="images/david.jpg">  -->
+            <img id="SillyDog" style="margin-left: auto" style="  margin-right: auto" src="DogPicture1.jpg" alt="Silly Dog" height="175"
+                width="300">
+            <img id="CuteDog" style="margin-left: auto" style="  margin-right: auto" src="puppy.jpg" height="175" width="300">
+            <img id="CuteDog2" style="margin-left: auto" style="  margin-right: auto" src="CutePuppy.jpg" height="175" width="300">
         </div><br><br><br><br><br><br><br><br><br><br>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script type="text/javascript">
@@ -38,7 +38,7 @@
                 //NOTE : img should with css: absolute;
                 //NOTE : img Width & Height can change by you;
                 $('.fadeImg').css('position', 'relative');
-                $('.fadeImg img').css({ 'position': 'absolute', 'width': '300px', 'height': '175px' });
+                $('.fadeImg img').css({ 'position': 'absolute', 'width': '300px', 'height': '175px'});
 
                 nextFadeIn();
             });
@@ -54,6 +54,8 @@
                 if ($current < $imgNum - 1) { $current++; } else { $current = 0; }
             };
         </script>
+    </section>
+    <section>
         <h1 id="AmazingDogFacts">Amazing Dog Facts!</h1>
         <p>These fun facts about dogs will make you feel all fuzzy inside.</p>
         <div id="fact2"></div>
@@ -75,11 +77,11 @@
                 coyote until it released the dog.</li><br><br>
 
             <li>Dogs have sweat glands in between their paws.</li><br>
-        <ul>
+            <ul>
 
-        </p>
+                </p>
 
-        <a id="startForm" href="Form.html">Back to Match Form</a>
+                <a id="startForm" href="Form.html">Back to Match Form</a>
     </section>
 
 </body>

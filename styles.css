@@ -1,10 +1,16 @@
 .topnav {
-    overflow: hidden;
-    background-color: rgb(205, 25, 221);
-  }
+  text-align: center;
+  overflow: hidden;
+  margin-left: 0px;
+  padding-left: 0x;
+  width: auto;
+  border: 2px solid black;
+  background-color: rgb(5, 199, 53);
+}
+
   
 .topnav a {
-    float: left;
+      float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -17,10 +23,10 @@
     color: black;
   }
 
-  .topnav a.active {
+  /* .topnav a.active {
     background-color: #04AA6D;
     color: white;
-  }
+  } */
 
   .WelcomeToPetMe{
     font-size: 60px;
@@ -60,12 +66,13 @@
     margin-right: auto;
     
   }
-
+  #dogImageFade{
+    margin-left: auto;
+    margin-right: auto;
+  }
   .fadeImg{
-      display: block;
-      /* width: 60%; */
-      margin-left: auto;
-      margin-right: auto;
+      display: flex;
+      justify-content: center;
   }
 
   #CuteDog{
@@ -81,5 +88,12 @@
     margin-left: auto;
     margin-right: auto;
   }
-
   
+  h1{
+    text-align: center;
+  }
+  
+  #body{
+    text-align: center;
+  }
+ 
