@@ -1,9 +1,4 @@
-// when Submit button is clicked
-// if certain answers are selected
-// then display dog gif
-// otherwise
-//display cat gif
-
+//This is the code that assigns the choice of cat or dog depending on the answers
 var continueDisplayCat = document.getElementById('continueCat');
 continueDisplayCat.style.display = "none";
 var continueDisplayDog = document.getElementById('continueDog');
@@ -11,15 +6,13 @@ continueDisplayDog.style.display = "none";
 var continueDisplayLlama = document.getElementById('continueLlama');
 continueDisplayLlama.style.display = "none";
 
-
-var btn = document.getElementById('submit');
+var btn = document.getElementById('submit');// when Submit button is clicked
 btn.addEventListener('click', function () {
 
     let cat = 0;
     let dog = 0;
 
-    let selectedAnswers = document.querySelectorAll("input:checked")
-    
+    let selectedAnswers = document.querySelectorAll("input:checked") // creating an array with all the checked values in it
 
     if (selectedAnswers[0].value === "low") {
         cat++;
@@ -74,6 +67,11 @@ btn.addEventListener('click', function () {
 
     console.log("You are a cat person:", cat)
     console.log("You are a dog person", dog)
+    // if certain answers are selected
+    // then display dog gif
+
+    // otherwise
+    //display cat gif
 
     if (cat > dog) {
         fetch(`https://cataas.com/cat?json=true`)
@@ -86,7 +84,7 @@ btn.addEventListener('click', function () {
                 let arrayOfImage = document.getElementById('petImage');
                 arrayOfImage.src = `https://cataas.com/${url}`
                 continueDisplayCat.style.display = 'block';
-                
+
             })
     } else if (cat < dog) {
         fetch(`https://random.dog/woof.json`)
@@ -100,14 +98,14 @@ btn.addEventListener('click', function () {
                 let arrayOfImage = document.getElementById('petImage');
                 arrayOfImage.src = url
                 continueDisplayDog.style.display = 'block';
-                
+
             })
     } else if (cat === dog) {
-        let arrayOfImage = document.getElementById('petImage')         
-            arrayOfImage.src = `llama.jpg`;
-            continueDisplayLlama.style.display = 'block';
+        let arrayOfImage = document.getElementById('petImage')
+        arrayOfImage.src = `llama.jpg`;
+        continueDisplayLlama.style.display = 'block';
 
-            }
+    }
 
     continueDisplayCat.style.display = "none"
     continueDisplayDog.style.display = "none"

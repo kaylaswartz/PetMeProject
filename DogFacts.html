@@ -14,16 +14,13 @@
             <a href="CatFacts.html">Cat Facts</a>
             <a href="DogFacts.html">Dog Facts</a>
             <a href="LlamaFacts.html">Llama Facts</a>
-
-
         </h1>
     </section>
-    <section id="dogImageFade">
+    <section>
         <div class="fadeImg">
-            <img id="SillyDog" style="margin-left: auto" style="  margin-right: auto" src="DogPicture1.jpg" alt="Silly Dog" height="175"
-                width="300">
-            <img id="CuteDog" style="margin-left: auto" style="  margin-right: auto" src="puppy.jpg" height="175" width="300">
-            <img id="CuteDog2" style="margin-left: auto" style="  margin-right: auto" src="CutePuppy.jpg" height="175" width="300">
+            <img src="DogPicture1.jpg" alt="Silly Dog" height="175" width="300">
+            <img src="puppy.jpg" height="175" width="300">
+            <img src="CutePuppy.jpg" height="175" width="300">
         </div><br><br><br><br><br><br><br><br><br><br>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script type="text/javascript">
@@ -38,7 +35,7 @@
                 //NOTE : img should with css: absolute;
                 //NOTE : img Width & Height can change by you;
                 $('.fadeImg').css('position', 'relative');
-                $('.fadeImg img').css({ 'position': 'absolute', 'width': '300px', 'height': '175px'});
+                $('.fadeImg img').css({ 'position': 'absolute', 'width': '300px', 'height': '175px' });
 
                 nextFadeIn();
             });
@@ -83,5 +80,4 @@
 
                 <a id="startForm" href="Form.html">Back to Match Form</a>
     </section>
-
 </body>
