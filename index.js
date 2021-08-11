@@ -8,12 +8,12 @@ continueDisplayLlama.style.display = "none";
 
 var btn = document.getElementById('submit');// when Submit button is clicked
 btn.addEventListener('click', function () {
-
     let cat = 0;
     let dog = 0;
-
+    
     let selectedAnswers = document.querySelectorAll("input:checked") // creating an array with all the checked values in it
 //evaluating question 1
+
     if (selectedAnswers[0].value === "low") {
         cat++;
     } else if (selectedAnswers[0].value === "medium") {
@@ -72,7 +72,7 @@ btn.addEventListener('click', function () {
 
     // otherwise
     //display cat gif
-
+    
     if (cat > dog) {
         fetch(`https://cataas.com/cat?json=true`)
             .then(function (response) {
@@ -112,5 +112,6 @@ btn.addEventListener('click', function () {
     // continueDisplayLlama.style.display = "none"
 
 
-})
+});
+
 
