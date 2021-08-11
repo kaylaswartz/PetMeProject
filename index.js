@@ -13,7 +13,7 @@ btn.addEventListener('click', function () {
     let dog = 0;
 
     let selectedAnswers = document.querySelectorAll("input:checked") // creating an array with all the checked values in it
-
+//evaluating question 1
     if (selectedAnswers[0].value === "low") {
         cat++;
     } else if (selectedAnswers[0].value === "medium") {
@@ -22,7 +22,7 @@ btn.addEventListener('click', function () {
     } else {
         dog++;
     };
-
+//evaluating question 2
     if (selectedAnswers[1].value === "never") {
         dog++;
     } else if (selectedAnswers[1].value === "sometimes") {
@@ -31,13 +31,13 @@ btn.addEventListener('click', function () {
     } else {
         cat++;
     }
-
+// evaluating question 3
     if (selectedAnswers[2].value === "yes") {
         dog++;
     } else if (selectedAnswers[2].value === "no") {
         cat++;
     }
-
+//evaluating question 4
     if (selectedAnswers[3].value === "0") {
         cat++;
         dog++;
@@ -55,7 +55,7 @@ btn.addEventListener('click', function () {
         dog++;
     }
 
-
+//evaluating question 5
     if (selectedAnswers[4].value === "NoFur") {
         cat++;
     } else if (selectedAnswers[4].value === "LittleFur") {
@@ -109,7 +109,7 @@ btn.addEventListener('click', function () {
 
     continueDisplayCat.style.display = "none"
     continueDisplayDog.style.display = "none"
-    continueDisplayLlama.style.display = "none"
+    // continueDisplayLlama.style.display = "none"
 
 
 })

@@ -11,7 +11,7 @@
 <body>
     <section>
         <h1 class="topnav">
-            <a class="active" href="index.html">Welcome</a>
+            <a href="index.html">Welcome</a>
             <a href="Form.html">Pet Match Form</a>
             <a href="CatFacts.html">Cat Facts</a>
             <a href="DogFacts.html">Dog Facts</a>
@@ -22,20 +22,52 @@
         <img id="multiplePetImage" src="MultiplePets.jpg" alt="" height="150" width="500" />
         <h1 class="WelcomeToPetMe">Welcome To Pet Me</h1>
         <article id="about">
-            <h4>About:</h4>
-            <p>Have you ever thought to yourself: "I know I want a pet, but I just can't decide if I want to get a cat
-                or a dog!"
-                Honestly, us too.
-                So we wanted to design the world's most thorough pet matching questionnaire!
-                Now, you are only a few steps away from meeting your dream pet.
-                Isn't it exciting?<br>Click on the link below to take the first step to finding your new best friend.
-            </p>
+            <button type="button" class="collapsible">About Our Site</button>
+            <div class="content">
+                <p>Have you ever thought to yourself: "I know I want a pet, but I just can't decide if I want to get a
+                    cat or a dog!" <br> Honestly, us too. <br>
+                    So we wanted to design the world's most thorough pet matching questionnaire! <br>
+                    Now, you are only a few steps away from meeting your dream pet.
+                    Isn't it exciting?
+                   </p>
+            </div>
+            <button type="button" class="collapsible">Benefits of Having a Pet</button>
+            <div class="content">
+                <p>
+                    <ol>
+                        <li>Pets can decrease blood pressure.</li>
+                        <li>Pets can decrease cholesterol levels.</li>
+                        <li>Pets can decrease feelings of loneliness.</li>
+                        <li>Pets increase your opportunities for exercise and outdoor activities.</li>
+                        <li>Pets can increase opportunities for socialization.</li>
+                    </ul>
+                </p>
+            </div>
+            <button type="button" class="collapsible">About The Authors</button>
+            <div class="content">
+                <p>Sequita, Lisa, and Kayla are three master software developers that all had a common problem: We wanted to <span id="striketext">pass our week 4 group coding project</span>
+                    find the perfect pet for us!</p>
+            </div>
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+            
+            
             <p>With this form, you will be matched to your perfect pet.</p>
             <a id="startForm" href="Form.html">Click Here To Start The Match Form</a>
-            <h4>About Us:</h4>
-            <p>Sequita, Lisa, and Kayla are three master software developers that all had a common problem: We wanted to
-                pass our week 4 group coding project...I mean...find the perfect pet for us!
-            </p>
 
         </article>
     </section>
