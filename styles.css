@@ -124,3 +124,8 @@
   #cuddlyPets{
     padding: 200px;
   }
+
+  .FormPage{
+    display: flex;
+    justify-content: space-around;
+  }
