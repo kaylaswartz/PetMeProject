@@ -93,7 +93,7 @@
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .collapsible:hover {
-    background-color: #ccc;
+    background-color: rgb(11, 245, 245);
   }
   
   /* Style the collapsible content. Note: hidden by default */
@@ -118,4 +118,9 @@
 
   #striketext{
     text-decoration: line-through;
+  }
+  
+
+  #cuddlyPets{
+    padding: 200px;
   }
