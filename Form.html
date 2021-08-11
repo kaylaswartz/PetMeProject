@@ -10,14 +10,16 @@
 <body>
     <section>
         <h1 class="topnav">
-            <a class="active" href="Welcome.html">Welcome</a>
+            <a class="active" href="index.html">Welcome</a>
             <a href="Form.html">Pet Match Form</a>
-            <a href="PetFacts.html">Pet Facts</a>
+            <a href="CatFacts.html">Cat Facts</a>
+            <a href="DogFacts.html">Dog Facts</a>
+            <a href="LlamaFacts.html">Llama Facts</a>
         </h1>
     </section>
-    <h1>Answer the following questions</h1>
+    <h1 id="answerTheQuestions">Answer the following questions</h1>
     <section>
-        <form id ="myForm">
+        <form id="myForm">
             <div class="question1">
                 <span>Question 1:</span><br>
                 <span>How active do you want your pet to be?</span><br>
@@ -79,20 +81,23 @@
                 <img class="catgif" src="" alt="">
             </section>
 
-            <input id="submit" type="submit"><br><br>
-            <img id="petImage" src="petPic2.jpg" alt=""/>
-            <!-- <img id="catImage" src="puppy.jpg" alt=""/> -->
+            <input id="submit" type="submit">
+            <a id="continueCat" href="CatFacts.html">Click Here To Learn More About Your New Cat!</a> <br><br>
+            <a id="continueDog" href="DogFacts.html">Click Here To Learn More About Your New Dog!</a> <br><br>
+            <a id="continueLlama" href="LlamaFacts.html">Click Here To Learn More About Your New Llama!</a> <br><br>
+            <img id="petImage" src="petPic2.jpg" alt="" />
+
+
         </form>
     </section>
 
-    </body>
-
-    <script>
-        const myForm = document.getElementById("myForm")
-        myForm.addEventListener("submit", (e) =>{
-            e.preventDefault()
-            console.log("The form has been submitted")
-        })
-    </script>>
 </body>
 
+<script>
+    const myForm = document.getElementById("myForm")
+    myForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+        console.log("The form has been submitted")
+    })
+</script>>
+</body>
