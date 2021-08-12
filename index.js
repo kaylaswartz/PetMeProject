@@ -146,7 +146,7 @@ if (btn1 !== null) {
 const beforeUnloadListener = (event) => {
     
     var selectedAnswers = document.querySelectorAll("input:checked")
-    if(selectedAnswers.length > 0){
+    if(selectedAnswers.length > 0 && selectedAnswers.length <= 5 ){
         event.preventDefault();
         return event.returnValue = "Are you sure you want to exit?";
     }
