@@ -1,27 +1,20 @@
 //This is the code that assigns the choice of cat or dog depending on the answers
 var continueDisplayCat = document.getElementById('continueCat');
-continueDisplayCat.style.display = "none";
 var continueDisplayDog = document.getElementById('continueDog');
-continueDisplayDog.style.display = "none";
 var continueDisplayLlama = document.getElementById('continueLlama');
-continueDisplayLlama.style.display = "none";
 
 if (continueDisplayCat !== null) {
-    //then we ignore so the error is not thrown
     continueDisplayCat.style.display = "none";
 }
 
 if (continueDisplayDog !== null) {
-    //then we ignore so the error is not thrown
     continueDisplayDog.style.display = "none";
 }
 
 if (continueDisplayLlama !== null) {
-    //then we ignore so the error is not thrown
     continueDisplayLlama.style.display = "none";
 }
 
-// TODO: Dog and llama too
 
 var btn = document.getElementById('submit');// when Submit button is clicked
 if (btn !== null) {
@@ -88,11 +81,7 @@ if (btn !== null) {
 
         console.log("You are a cat person:", cat)
         console.log("You are a dog person", dog)
-        // if certain answers are selected
-        // then display dog gif
-
-        // otherwise
-        //display cat gif
+        
 
         if (cat > dog) {
             fetch(`https://cataas.com/cat?json=true`)
