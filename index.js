@@ -28,6 +28,9 @@ if (btn !== null) {
     btn.addEventListener('click', function () {
         let cat = 0;
         let dog = 0;
+        continueDisplayCat.style.display = "none"
+        continueDisplayDog.style.display = "none"
+        continueDisplayLlama.style.display = "none"
 
         let selectedAnswers = document.querySelectorAll("input:checked") // creating an array with all the checked values in it
         //evaluating question 1
@@ -125,13 +128,9 @@ if (btn !== null) {
 
         }
 
-        // continueDisplayCat.style.display = "none"
-        // continueDisplayDog.style.display = "none"
-        //continueDisplayLlama.style.display = "none"
-
-
     });
 }
+
 
 var btn1 = document.getElementById('clickMe');
 
