@@ -1,12 +1,30 @@
 //This is the code that assigns the choice of cat or dog depending on the answers
 var continueDisplayCat = document.getElementById('continueCat');
-continueDisplayCat.style.display = "none";
+//continueDisplayCat.style.display = "none";
 var continueDisplayDog = document.getElementById('continueDog');
-continueDisplayDog.style.display = "none";
+// continueDisplayDog.style.display = "none";
 var continueDisplayLlama = document.getElementById('continueLlama');
-continueDisplayLlama.style.display = "none";
+// continueDisplayLlama.style.display = "none";
+
+if(continueDisplayCat !== null) {
+    //then we ignore so the error is not thrown
+   continueDisplayCat.style.display = "none";   
+}  
+
+if(continueDisplayDog !== null) {
+    //then we ignore so the error is not thrown
+    continueDisplayDog.style.display = "none";   
+} 
+
+if(continueDisplayLlama !== null) {
+    //then we ignore so the error is not thrown
+    continueDisplayLlama.style.display = "none";   
+} 
+
+// TODO: Dog and llama too
 
 var btn = document.getElementById('submit');// when Submit button is clicked
+if(btn !== null) { 
 btn.addEventListener('click', function () {
     let cat = 0;
     let dog = 0;
@@ -113,5 +131,23 @@ btn.addEventListener('click', function () {
 
 
 });
+}
 
+var btn1 = document.getElementById('clickMe');
 
+if(btn1 !== null) { 
+btn1.addEventListener('click', function () {
+fetch('https://meowfacts.herokuapp.com/')
+    .then(function (response) {
+        console.log(response);
+        return response.json();
+    }).then(function (factData) {
+        let factArray = [];
+        let fact = factData.data;
+        factArray.push(fact);
+        let randomCatFact = document.getElementById('fact1');
+        randomCatFact.innerText = factArray;
+      
+    })
+});
+}
