@@ -7,7 +7,7 @@
     <script defer src="index.js" charset="utf-8"></script>
 </head>
 
-<body>
+<body id="formbody">
     <section>
         <h1 class="topnav">
             <a href="index.html">Welcome</a>
@@ -15,20 +15,22 @@
             <a href="CatFacts.html">Cat Facts</a>
             <a href="DogFacts.html">Dog Facts</a>
             <a href="LlamaFacts.html">Llama Facts</a>
-            <a href="https://www.petfinder.com/">Adopt a Pet Today</a>
+            <a href="https://www.petfinder.com/" target="_blank">Adopt a Pet Today</a>
         </h1>
     </section>
-    <h1 id="answerTheQuestions">Answer the following questions</h1>
+    <h1>
+        <span id="answerTheQuestions">Answer The Following Questions</span>
+    </h1>
     <section class="FormPage">
         <form id="myForm">
-            <div class="question1" >
+            <div class="question1">
                 <span>Question 1:</span><br>
                 <span>How active do you want your pet to be?</span><br>
                 <input type="radio" id="activelow" name="active" value="low" required>
                 <label for="html">low</label><br>
                 <input type="radio" id="activemeium" name="active" value="medium" required>
                 <label for="html">medium</label><br>
-                <input type="radio" id="activehigh" name="active" value="high"required>
+                <input type="radio" id="activehigh" name="active" value="high" required>
                 <label for="html">high</label>
             </div>
             <br>
@@ -78,16 +80,19 @@
                 <label for="html">Very Furry</label>
             </div>
             <br>
-            
+
             <input id="submit" type="submit">
-            
+
         </form>
-        
+
         <div>
-            <img id="petImage" src="testpets.jpg" alt="" height="350" width="600"/>
-            <a class="button1" id="continueCat" href="CatFacts.html">Click Here To Learn More About Your New Cat!</a> <br><br>
-            <a class="button1" id="continueDog" href="DogFacts.html">Click Here To Learn More About Your New Dog!</a> <br><br>
-            <a class="button1" id="continueLlama" href="LlamaFacts.html">Dogs and cats too boring? Get a Llama!!</a> <br><br>
+            <img id="petImage" src="testpets.jpg" alt="" height="350" width="600" />
+            <a class="button1" id="continueCat" href="CatFacts.html">Click Here To Learn More About Your New Cat!</a>
+            <br><br>
+            <a class="button1" id="continueDog" href="DogFacts.html">Click Here To Learn More About Your New Dog!</a>
+            <br><br>
+            <a class="button1" id="continueLlama" href="LlamaFacts.html">Dogs and cats too boring? Get a Llama!!</a>
+            <br><br>
         </div>
 
     </section>

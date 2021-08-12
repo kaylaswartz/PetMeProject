@@ -144,3 +144,70 @@
     margin: 4px 2px;
     cursor: pointer;
   }
+
+  #doglist li{
+    list-style-image: url('DogPaw.JPG');
+  }
+  
+  #llamabody{
+    background-color:lemonchiffon;
+  }
+  #dogbody{
+    background-color:lightcoral;
+  }
+
+  #llamalist {
+    list-style: none;
+    padding-left: 0;
+}
+#llamalist li {
+    position: relative;
+    padding-left: 20px;
+}
+#llamalist li:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-image: url('Llama2.jpg');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+#clickMe{
+  background-color: lightseagreen;
+  color: white;
+  border-radius: 8px;
+  padding: 15px;
+  border: none;
+  font-weight: bold;
+  font-family:'Lucida Console';
+}
+#catbody{
+  background-color: cornflowerblue;
+}
+
+#catFunFacts{
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  color:white
+  }
+  #llamaFunFacts{
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  }
+  #formbody{
+    background-color: thistle;
+  }
+#answerTheQuestions{
+  background-color: violet;
+  text-align: center;
+  font-size:30px;
+  font-style: italic;
+}
