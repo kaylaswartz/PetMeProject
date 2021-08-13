@@ -140,6 +140,19 @@ if (btn1 !== null) {
     });
 }
 
+const beforeUnloadListener = (event) => {
+    
+    var selectedAnswers = document.querySelectorAll("input:checked")
+    if(selectedAnswers.length > 0 && selectedAnswers.length <= 5 ){
+        event.preventDefault();
+        return event.returnValue = "Are you sure you want to exit?";
+    }
+    };
+   window.onload = function() {
+    window.addEventListener("beforeunload",beforeUnloadListener)
+}
+  
+
 
 var btn2 = document.getElementById('button2');
 var dogFactsArray = [
@@ -152,27 +165,13 @@ var dogFactsArray = [
 ]
 if (btn2 !== null) {
     btn2.addEventListener('click', function () {
-        // let newDogFactArray = [];
         let randomIndex = dogFactsArray[Math.floor(Math.random() * dogFactsArray.length)]
-        
-        // newDogFactArray.push(randomIndex);
         let newDogFact = document.getElementById('fact2');
             newDogFact.innerText = randomIndex;
     });
 }
 
-/* <li>Llamas are members of the camelid family meaning they're pretty closely related to vicuñas and camels.</li><br><br>
-            
-            <li>Camelids first appeared on the Central Plains of North America about 40 million years ago. About 3 million years ago, llamas' ancestors migrated to South America.</li><br><br>
 
-            <li>During the last ice age (10,000-12,000 years ago) camelids went extinct in North America. Now there are around 160,000 llamas and 100,000 alpacas in the United States and Canada.</li><br><br>
-
-            <li>Llamas were first domesticated and used as pack animals 4,000 to 5,000 years ago in the Peruvian highlands.</li><br><br>
-
-            <li>Llamas can grow as much as 6 feet tall though the average llama between 5 feet 6 inches and 5 feet 9 inches tall.</li><br><br>
-
-            <li>Llamas weigh between 280 and 450 pounds and can carry 25 to 30 percent of their body weight, so a 400-pound male llama can carry about 100 to 120 pounds on a trek of 10 to 12 miles with no problem.</li><br>
-            <ul></ul> */
 
 var btn3 = document.getElementById('button3');
 var LlamaFactsArray = [
