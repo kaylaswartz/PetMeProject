@@ -2,6 +2,8 @@
 var continueDisplayCat = document.getElementById('continueCat');
 var continueDisplayDog = document.getElementById('continueDog');
 var continueDisplayLlama = document.getElementById('continueLlama');
+var selectedAnswers = document.querySelectorAll("input:checked")
+
 
 if (continueDisplayCat !== null) {
     continueDisplayCat.style.display = "none";
@@ -81,7 +83,7 @@ if (btn !== null) {
 
         console.log("You are a cat person:", cat)
         console.log("You are a dog person", dog)
-        
+
 
         if (cat > dog) {
             fetch(`https://cataas.com/cat?json=true`)
@@ -151,8 +153,6 @@ const beforeUnloadListener = (event) => {
    window.onload = function() {
     window.addEventListener("beforeunload",beforeUnloadListener)
 }
-  
-
 
 var btn2 = document.getElementById('button2');
 var dogFactsArray = [
@@ -189,3 +189,4 @@ if (btn3 !== null) {
             newLlamaFact.innerText = randomLlamaIndex;
     });
 }
+
