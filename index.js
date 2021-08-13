@@ -2,6 +2,8 @@
 var continueDisplayCat = document.getElementById('continueCat');
 var continueDisplayDog = document.getElementById('continueDog');
 var continueDisplayLlama = document.getElementById('continueLlama');
+var selectedAnswers = document.querySelectorAll("input:checked")
+
 
 if (continueDisplayCat !== null) {
     continueDisplayCat.style.display = "none";
@@ -81,7 +83,7 @@ if (btn !== null) {
 
         console.log("You are a cat person:", cat)
         console.log("You are a dog person", dog)
-        
+
 
         if (cat > dog) {
             fetch(`https://cataas.com/cat?json=true`)
@@ -139,3 +141,17 @@ if (btn1 !== null) {
             })
     });
 }
+
+
+const beforeUnloadListener = (event) => {
+    
+    var selectedAnswers = document.querySelectorAll("input:checked")
+    if(selectedAnswers.length > 0 && selectedAnswers.length <= 5 ){
+        event.preventDefault();
+        return event.returnValue = "Are you sure you want to exit?";
+    }
+    };
+   window.onload = function() {
+    window.addEventListener("beforeunload",beforeUnloadListener)
+}
+  
