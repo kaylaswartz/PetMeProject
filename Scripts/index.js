@@ -114,7 +114,7 @@ if (btn !== null) {
                 })
         } else if (cat === dog) {
             let arrayOfImage = document.getElementById('petImage')
-            arrayOfImage.src = `llama.jpg`;
+            arrayOfImage.src = `../Assets/llama.jpg`;
             continueDisplayLlama.style.display = 'block';
 
         }

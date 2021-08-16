@@ -146,7 +146,7 @@
   }
 
   #doglist li{
-    list-style-image: url('DogPaw.JPG');
+    list-style-image: url('../Assets/DogPaw.JPG');
   }
   
   #llamabody{
@@ -169,7 +169,7 @@
     width: 15px;
     height: 15px;
     position: absolute;
-    background-image: url('Llama2.jpg');
+    background-image: url('../Assets/Llama2.jpg');
     background-size: cover;
     background-position: center;
     left: 0;
