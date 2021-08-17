@@ -19,6 +19,12 @@ function hideButtons() {
 }
 hideButtons();
 
+function applyCatImageToPage(url) {
+let arrayOfImage = document.getElementById('petImage');
+            arrayOfImage.src = `https://cataas.com/${url}`
+            continueDisplayCat.style.display = 'block';
+}
+
 function fetchCatImageAndApplyToPage() {
     fetch(`https://cataas.com/cat?json=true`)
         .then(function (response) {
@@ -27,10 +33,7 @@ function fetchCatImageAndApplyToPage() {
         }).then(function (catData) {
             catAPIData = catData
             let url = catAPIData.url
-            let arrayOfImage = document.getElementById('petImage');
-            arrayOfImage.src = `https://cataas.com/${url}`
-            continueDisplayCat.style.display = 'block';
-
+            applyCatImageToPage(url);
         })
 
 }
