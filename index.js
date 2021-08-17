@@ -4,19 +4,20 @@ var continueDisplayDog = document.getElementById('continueDog');
 var continueDisplayLlama = document.getElementById('continueLlama');
 var selectedAnswers = document.querySelectorAll("input:checked")
 
+function hideButtons() {
+    if (continueDisplayCat !== null) {
+        continueDisplayCat.style.display = "none";
+    }
 
-if (continueDisplayCat !== null) {
-    continueDisplayCat.style.display = "none";
+    if (continueDisplayDog !== null) {
+        continueDisplayDog.style.display = "none";
+    }
+
+    if (continueDisplayLlama !== null) {
+        continueDisplayLlama.style.display = "none";
+    }
 }
-
-if (continueDisplayDog !== null) {
-    continueDisplayDog.style.display = "none";
-}
-
-if (continueDisplayLlama !== null) {
-    continueDisplayLlama.style.display = "none";
-}
-
+hideButtons();
 
 var btn = document.getElementById('submit');// when Submit button is clicked
 if (btn !== null) {
@@ -143,31 +144,31 @@ if (btn1 !== null) {
 }
 
 const beforeUnloadListener = (event) => {
-    
+
     var selectedAnswers = document.querySelectorAll("input:checked")
-    if(selectedAnswers.length > 0 && selectedAnswers.length <= 5 ){
+    if (selectedAnswers.length > 0 && selectedAnswers.length <= 5) {
         event.preventDefault();
         return event.returnValue = "Are you sure you want to exit?";
     }
-    };
-   window.onload = function() {
-    window.addEventListener("beforeunload",beforeUnloadListener)
+};
+window.onload = function () {
+    window.addEventListener("beforeunload", beforeUnloadListener)
 }
 
 var btn2 = document.getElementById('button2');
 var dogFactsArray = [
-    'All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled intrees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.', 
-    'Ancient Egyptians revered their dogs. When a pet dog would die, the owners shaved off their eyebrows smeared mud in their hair, and mourned aloud for days.', 
-    'Small quantities of grapes and raisins can cause renal failure in dogs. Chocolate, macadamia nuts, cooked onions, or anything with caffeine can also be harmful.', 
-    'Apple and pear seeds contain arsenic, which may be deadly to dogs.', 
-    'Rock star Ozzy Osborne saved his wife Sharons Pomeranian from a coyote by tackling and wrestling the coyote until it released the dog.', 
+    'All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled intrees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.',
+    'Ancient Egyptians revered their dogs. When a pet dog would die, the owners shaved off their eyebrows smeared mud in their hair, and mourned aloud for days.',
+    'Small quantities of grapes and raisins can cause renal failure in dogs. Chocolate, macadamia nuts, cooked onions, or anything with caffeine can also be harmful.',
+    'Apple and pear seeds contain arsenic, which may be deadly to dogs.',
+    'Rock star Ozzy Osborne saved his wife Sharons Pomeranian from a coyote by tackling and wrestling the coyote until it released the dog.',
     'Dogs have sweat glands in between their paws.'
 ]
 if (btn2 !== null) {
     btn2.addEventListener('click', function () {
         let randomIndex = dogFactsArray[Math.floor(Math.random() * dogFactsArray.length)]
         let newDogFact = document.getElementById('fact2');
-            newDogFact.innerText = randomIndex;
+        newDogFact.innerText = randomIndex;
     });
 }
 
@@ -186,7 +187,7 @@ if (btn3 !== null) {
     btn3.addEventListener('click', function () {
         let randomLlamaIndex = LlamaFactsArray[Math.floor(Math.random() * LlamaFactsArray.length)]
         let newLlamaFact = document.getElementById('fact3');
-            newLlamaFact.innerText = randomLlamaIndex;
+        newLlamaFact.innerText = randomLlamaIndex;
     });
 }
 
