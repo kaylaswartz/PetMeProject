@@ -18,10 +18,28 @@ function hideButtons() {
     }
 }
 hideButtons();
+
+function fetchCatImageAndApplyToPage() {
+    fetch(`https://cataas.com/cat?json=true`)
+        .then(function (response) {
+            console.log(response);
+            return response.json();
+        }).then(function (catData) {
+            catAPIData = catData
+            let url = catAPIData.url
+            let arrayOfImage = document.getElementById('petImage');
+            arrayOfImage.src = `https://cataas.com/${url}`
+            continueDisplayCat.style.display = 'block';
+
+        })
+
+}
+
 function processForm() {
+    hideButtons();
+
     let cat = 0;
     let dog = 0;
-    hideButtons();
 
     let selectedAnswers = document.querySelectorAll("input:checked") // creating an array with all the checked values in it
     //evaluating question 1
@@ -82,18 +100,9 @@ function processForm() {
 
 
     if (cat > dog) {
-        fetch(`https://cataas.com/cat?json=true`)
-            .then(function (response) {
-                console.log(response);
-                return response.json();
-            }).then(function (catData) {
-                catAPIData = catData
-                let url = catAPIData.url
-                let arrayOfImage = document.getElementById('petImage');
-                arrayOfImage.src = `https://cataas.com/${url}`
-                continueDisplayCat.style.display = 'block';
+        // fetch cat image and apply to page
+        fetchCatImageAndApplyToPage();
 
-            })
     } else if (cat < dog) {
         fetch(`https://random.dog/woof.json`)
             .then(function (response) {
