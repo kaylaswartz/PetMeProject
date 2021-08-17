@@ -117,9 +117,7 @@ function processForm() {
 }
 var btn = document.getElementById('submit');// when Submit button is clicked
 if (btn !== null) {
-    btn.addEventListener('click', function () {
-        processForm();
-    });
+    btn.addEventListener('click', processForm);
 }
 
 
