@@ -31,9 +31,7 @@ function fetchCatImageAndApplyToPage() {
             console.log(response);
             return response.json();
         }).then(function (catData) {
-            catAPIData = catData
-            let url = catAPIData.url
-            applyCatImageToPage(url);
+            applyCatImageToPage(catData.url);
         })
 
 }
