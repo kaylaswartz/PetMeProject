@@ -20,7 +20,7 @@ function hideButtons() {
 hideButtons();
 
 function applyCatImageToPage(url) {
-let arrayOfImage = document.getElementById('petImage');
+    let arrayOfImage = document.getElementById('petImage');
             arrayOfImage.src = `https://cataas.com/${url}`
             continueDisplayCat.style.display = 'block';
 }
