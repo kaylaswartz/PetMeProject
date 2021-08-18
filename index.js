@@ -110,8 +110,7 @@ function processForm() {
                 console.log(response);
                 return response.json();
             }).then(function (dogData) {
-                dogAPIData = dogData
-                let url = dogAPIData.url
+                let url = dogData.url
 
                 let arrayOfImage = document.getElementById('petImage');
                 arrayOfImage.src = url
