@@ -19,6 +19,25 @@ let hidebuttons = () => {
 }
 hidebuttons();
 
+let applyCatImageToPage = (url) => {
+    let arrayOfImage = document.getElementById('petImage');
+    arrayOfImage.src = `https://cataas.com/${url}`
+    continueDisplayCat.style.display = 'block';
+}
+
+let fetchCatImageAndApplyToPage = () => {
+    fetch(`https://cataas.com/cat?json=true`)
+            .then(function (response) {
+                console.log(response);
+                return response.json();
+            }).then(function (catData) {
+                applyCatImageToPage(catData.url);
+            })           
+}
+
+
+
+
 let processForm = () => {
     hidebuttons();
 
@@ -85,18 +104,9 @@ let processForm = () => {
 
 
     if (cat > dog) {
-        fetch(`https://cataas.com/cat?json=true`)
-            .then(function (response) {
-                console.log(response);
-                return response.json();
-            }).then(function (catData) {
-                catAPIData = catData
-                let url = catAPIData.url
-                let arrayOfImage = document.getElementById('petImage');
-                arrayOfImage.src = `https://cataas.com/${url}`
-                continueDisplayCat.style.display = 'block';
-                //clickCatFactsBtn();
-            })
+        //fetch cat image and apply to page
+        fetchCatImageAndApplyToPage();
+        
     } else if (cat < dog) {
         fetch(`https://random.dog/woof.json`)
             .then(function (response) {
