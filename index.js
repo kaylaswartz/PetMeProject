@@ -122,9 +122,7 @@ let processForm = () => {
 
     var btn = document.getElementById('submit');// when Submit button is clicked
     if (btn !== null) {
-        btn.addEventListener('click', function () {
-        processForm();   
-        });
+        btn.addEventListener('click', processForm);
     }
 
     var btn1 = document.getElementById('clickMe');
@@ -196,8 +194,3 @@ let processForm = () => {
                 newLlamaFact.innerText = randomLlamaIndex;
             });
         }
-
-
-
-
-        clickSubmitBtn();
